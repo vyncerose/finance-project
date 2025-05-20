@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjustable Columns with Expandable Boxes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-md-6 border-end">
+                <hr>
+                <div class="accordion" id="accordionLeft">
+                    <!-- Box 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-controls="collapse1">
+                                <b>UPDATES</b>&nbsp;(Last update on May 1st)
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1">
+                            <div class="accordion-body">
+                                <b>May 1st:</b><br><br>
+                                Please be careful with the use of PII in your prompts! We've seen a few submissions becoming invalid because of that specific reason. If you are unsure of what it means, read the instructions again, and carefully. <br><br>
+                                The high quality of the submissions is very important. We added checkboxes to ensure that your submission is valid.
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Box 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                <b>OVERVIEW</b>
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2">
+                            <div class="accordion-body">
+                                
+                                In this project, we would like to train AI models to analyze and understand various aspects of financial reports, 10-Q and 10-K. If you don’t have the necessary knowledge and expertise in order to deliver high quality submissions, please skip this project. There is no penalty in not participating and other projects might be more suitable for you.<br><br>
+
+                                You will be providing publicly available filings to AI models. Those should be found on:<br>
+                                <a href="https://www.sec.gov/edgar/searchedgar/companysearch">SEC website</a><br><br>
+
+                                Understanding how 10-K and 10-Q reports work is very important for this project. It will help in creating original and useful prompts to train the AI models. All the important information can be found on the following website, please take the time to read it:<br>
+                                <a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/how-read">Information on 10-K and 10-Q</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Box 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                <b>INSTRUCTIONS</b>
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3">
+                            <div class="accordion-body">
+                                Always read the “Reminders” section! It includes critical information on the project as well as requirements for your current task. Examples are available in the section “Important information”.<br><br>
+
+                                First of all, take into consideration the category of your current task. There are three categories:<br><br>
+
+                                Category A:
+                                You are expected to ask simple questions on a single document. Do not provide more than one pdf file for this task. In order to answer your request properly, consider that the AI models should be able to answer only by analyzing the provided document. Do not expect them to infer on the data.<br><br>
+
+                                Category B:
+                                Ask hard questions on a single document. This means that the AI models are expected to infer on the provided data. They might need to understand multiple parts of the document in order to give an appropriate answer, or make calculations, for example. The answer shouldn’t be directly obtainable without any “transformation”.<br><br>
+
+                                Category C:
+                                This is similar to Category B, with the main difference being that multiple documents should be considered in the task. Hard questions are expected here.<br><br>
+
+                                Following the guide in the “Getting the documents” section, find 10-Q and/or 10-K reports of the desired companies. Write an original and useful prompt (simple or hard depending on your task’s category) related to the chosen documents.<br><br>
+
+                                Provide an ideal answer to your prompt. This is what is expected from a “perfect” AI model. Be careful with the accuracy of the answer and take the time to write properly. You should always be cautious, but especially for the ideal answer, do not make grammatical mistakes!<br><br>
+
+                                In order to give such a good answer, what exactly is the information necessary? We need you to write the supporting facts as well. This will help with evaluating the models’ answers later on. Please indicate the document used, the page where the information was found and the fact with any important related information.<br><br>
+
+                                Add at least one document to your submission (multiple if your task is of category C) and enter all of the requested information.<br><br>
+
+                                Make sure your submission doesn’t have any issues. Take the time to make it perfect! Then submit it.<br><br>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Box important information -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingImportantInfo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseImportantInfo" aria-controls="collapseImportantInfo">
+                                <b>IMPORTANT INFORMATION</b>
+                            </button>
+                        </h2>
+                        <div id="collapseImportantInfo" class="accordion-collapse collapse" aria-labelledby="headingImportantInfo">
+                            <div class="accordion-body">
+                                Please be specific with your prompts! We expect accurate and well formulated prompts for this project. Do not make subjective requests either, the models should follow straightforward instructions. Do not assume the AI models can look up information elsewhere before analyzing the data. Prompts should ask for factual information with support in the documents. Do not ask for opinions, unless they are stated in the documents. That means not asking for an opinion from the AI model itself.<br><br>
+
+                                This is a BAD example of a simple prompt:<br>
+                                Do you think this company made enough money last year?<br><br>
+
+                                Do not ask the AI models to “think”; making “enough” money is subjective; “last year” can be improved by specifying which year we are talking about”.<br><br>
+
+                                You should never include PII (Personally Identifiable Information) in your prompts and answers. PII includes, but is not limited to, any information that can be used to identify an individual, such as names, addresses, phone numbers, social security numbers, email addresses. Sharing or requesting such information will make your submission invalid. Center you prompts about the company itself, not its members.<br><br>
+
+                                Here are some proper examples of what is expected:<br><br>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingEx-1">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEx-1" aria-expanded="false" aria-controls="collapseEx-1">
+                                            <b>Example for Category A</b>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseEx-1" class="accordion-collapse collapse" aria-labelledby="headingEx-1">
+                                        <div class="accordion-body">
+                            
+
+                                            Apple Inc. 2024 Form 10-K:<br>
+                                            Link to the SEC page of the provided document:<br>
+                                            <a href="https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm">https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm</a><br>
+                                            Fiscal year-end date of the report: September 28, 2024<br><br>
+
+                                            Prompt: <br>
+                                            Could you provide the net sales Apple generated exclusively with the iPad in 2024?<br><br>
+
+                                            Ideal answer:<br>
+                                            Apple generated $26.694 billion from their iPad net sales exclusively in 2024.<br><br>
+
+                                            Supporting facts:<br>
+                                            Apple Inc. 2024 Form 10-K page 35, same information found on page 23<br>
+                                            Table of net sales, line “iPad”, column “2024”, value of $26,694, represented in millions: $26.694 billion.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingEx-2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEx-2" aria-expanded="false" aria-controls="collapseEx-2">
+                                            <b>Example for Category B</b>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseEx-2" class="accordion-collapse collapse" aria-labelledby="headingEx-2">
+                                        <div class="accordion-body">
+
+                                            Apple Inc. 2024 Form 10-K:<br>
+                                            Link to the SEC page of the provided document:<br>
+                                            <a href="https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm">https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm</a><br>
+                                            Fiscal year-end date of the report: September 28, 2024<br><br>
+
+                                            Prompt: <br>
+                                            Which regions showed consistent year-over-year revenue growth for Apple Inc. from 2022 to 2024? For regions with varying trends, please explain how the revenue changed from one year to the next during this period. I don’t want numbers, just explanations.<br><br>
+
+                                            Ideal answer:<br>
+                                            The only region where Apple Inc. achieved consistent year-over-year revenue growth was the “Rest of Asia Pacific.” In contrast, the Americas, Europe, Greater China, and Japan all experienced a revenue dip in 2023. While the Americas and Japan rebounded in 2024, their revenue remained below 2022 levels. Europe, however, saw its highest revenue of the three years in 2024 after the dip. Meanwhile, revenue in Greater China continued to decline steadily over this period.<br><br>
+
+                                            Supporting facts:<br>
+                                            Apple Inc. 2024 Form 10-K page 47<br>
+                                            Table including the net sales in millions per region for 2022, 2023 and 2024:<br><br>
+
+                                            Region Name,Net Sales 2022,Net Sales 2023,Net Sales 2024<br>
+                                            Americas,$169,658,$162,560,$167,045<br>
+                                            Europe,$95,118,$94,294,$101,328<br>
+                                            Greater China,$74,200,$72,559,$66,952<br>
+                                            Japan,$25,977,$24,257,$25,052<br>
+                                            Rest of Asia Pacific,$29,375,$29,615,$30,658
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingEx-3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEx-3" aria-expanded="false" aria-controls="collapseEx-3">
+                                            <b>Example for Category C</b>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseEx-3" class="accordion-collapse collapse" aria-labelledby="headingEx-3">
+                                        <div class="accordion-body">
+
+                                            Apple Inc. 2024 Form 10-K:<br>
+                                            Link to the SEC page of the provided document:<br>
+                                            <a href="https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm">https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm</a><br>
+                                            Fiscal year-end date of the report: September 28, 2024<br><br>
+
+                                            Alphabet Inc. 2024 Form 10-K:<br>
+                                            Link to the SEC page of the provided document:<br>
+                                            <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm">https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm</a><br>
+                                            Fiscal year-end date of the report: December 31, 2024<br><br>
+
+                                            Prompt: <br>
+                                            I want you to compare the net sales of Alphabet Inc. and Apple Inc. for 2023 and 2024. If the year-to-year growth stays the same, how long would it take for the company with less yearly revenue to surpass the other, if it’s possible?<br><br>
+
+                                            Ideal answer:<br>
+                                            In 2023, Alphabet Inc. generated $307,394,000,000 while Apple Inc. generated $383,285,000,000. The latter made (383,285 - 307,394) / 307,394 = 24.69% more than the former. In 2024, the numbers are respectively $350,018,000,000 and $391,035,000,000. Apple Inc. made 11.72% more than Alphabet Inc. in 2024. For both years, it’s Apple Inc. that generated the most revenues, but Alphabet Inc. grew more.<br><br>
+
+                                            Considering a yearly increase of (391,035 - 383,285) / 383,285 = 2.02% for Apple Inc. and of (350,018 - 307,394) / 307,394 = 13.87% for Alphabet Inc., here is a breakdown of the potential net sales in the next years:<br>
+                                            Company, 2025, 2026<br>
+                                            Alphabet Inc., $398,565,496,600, $453,846,530,978<br>
+                                            Apple Inc., $398,933,907,000, $406,992,371,921<br><br>
+
+                                            After only one year, based on the assumption of a stable year-to-year growth for each company, Alphabet Inc. would almost reach the goal. It’s in 2026 that Alphabet Inc. would surpass Apple Inc. though.<br><br>
+
+
+                                            Supporting facts:<br>
+                                            Apple Inc. 2024 Form 10-K page 35<br>
+                                            Table of net sales millions:<br>
+                                            , 2023, 2024<br>
+                                            Total net sales, $383,285, $391,035<br><br>
+
+                                            Alphabet Inc. 2024 Form 10-K, where “revenues” = “net sales”<br>
+                                            Table of revenues in millions:<br>
+                                            , 2023, 2024<br>
+                                            Total revenues, $307,394, $350,018
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Box 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                <b>GETTING THE DOCUMENTS</b>
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4">
+                            <div class="accordion-body">
+                                We are specifically training the models on 10-Q and 10-K reports. Depending on the category of your current task, you will be asked to provide a single or multiple reports, up to 40. All of the documents provided should be of October 2023 or more recent. Do not use any older report. You will also need to provide the link to the SEC page along with the fiscal year-end date of the report. This can be found while searching for a report or even inside the report. Do not use the filing date, the reporting date is what we’re looking for. The submitted file(s) should be of pdf type, see instructions below as to how to do it properly.<br><br>
+
+                                Here is the quickest way to obtain the files (see the related screenshots if necessary):<br><br>
+
+                                Once on the SEC website (<a href="https://www.sec.gov/edgar/searchedgar/companysearch">SEC website</a>), find the company you’d like to work on in the “Search By” box. Wait for the page to be fully loaded, it can take a few seconds, otherwise, you might not see the suggestions related to your search. Be patient! If the page is still loading, don’t expect anything to appear. Select the company you were looking for in the search dropdown once it appears.<br><br>
+
+                                You will then be sent to the company’s page, on which you can obtain any 10-K/10-Q report available. Click on “View all 10-K’s and 10-Qs” if you are not satisfied with the suggested results. Click on the document you’d like to analyze.<br><br>
+
+                                Alternatively, when searching for a company, click on “Submit”. Select the desired company in the list by clicking on their CIK. Specify the filing type, such as “10-K”, and hit “Search”. Click on “Documents” beside what you’re looking for. Select the proper document, in this case (see screenshots), under “Document”, you should click on “aapl-20240928.htm”. This is not as straightforward as the previous method, but it can be done this way, especially if no dropdown menu appears when searching for a company (keep in mind that it might take some time before being able to see the dropdown menu, the page needs to be fully loaded!).<br><br>
+
+                                Finally, to obtain the pdf file of this report, click on “Menu” in the upper left corner of the page, then “Open as HTML”. Save the link, this is what you need to enter for “Link to the SEC page”. Print the page, save it as PDF, and you’re good to go.<br><br>
+
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading4-2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4-2" aria-expanded="false" aria-controls="collapse4-2">
+                                            <b>RELATED SCREENSHOTS</b>
+                                        </button>
+                                    </h2>
+                                    <div id="collapse4-2" class="accordion-collapse collapse" aria-labelledby="heading4-2">
+                                        <div class="accordion-body">
+                                            Screenshots related to the recommended method:<br>
+                                            <img src="images/getDoc/1.png">
+                                            <img src="images/getDoc/2.png">
+                                            <img src="images/getDoc/3.png">
+                                            <img class="small-image" src="images/getDoc/4.png"><br><br>
+
+                                            Screenshots related to the alternative method:<br>
+                                            <img class="small-image" src="images/altGetDoc/1.png">
+                                            <img src="images/altGetDoc/2.png">
+                                            <img class="small-image" src="images/altGetDoc/3.png">
+                                            <img src="images/altGetDoc/4.png">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                <b>REMINDERS</b>
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5">
+                            <div class="accordion-body">
+                                <a href="https://www.sec.gov/edgar/searchedgar/companysearch">SEC website</a><br>
+                                <a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/how-read">Information on 10-K and 10-Q</a><br><br>
+                                Your prompt category is: <span style="color: blue;">Category A.</span><br>
+                                Category A: Simple questions on one single document.<br>
+                                Category B: Hard questions on one single document.<br>
+                                Category C: Hard questions on multiple (1-40) documents.<br>
+                                Provide 10-K or 10-Q reports (pdf file, SEC page link and reporting date).<br>
+                                No PII (Personally Identifiable Information) in the prompts/answers.<br>
+                                Double check everything before submitting.<br>
+                                Please use recent documents only, from October 2023 or more recent.<br>
+                                Prompts should ask for factual information with support in the documents.
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-6">
+                <hr>
+                <div class="container mt-5">
+                    <h4>Select the category of your prompt:</h4>
+                    <div class="btn-group" role="group" aria-label="Choice form">
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="option1">Category A</label>
+
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="option2">Category B</label>
+
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="option3">Category C</label>
+                    </div>
+                </div><br><br>
+
+                <div class="mb-3">
+                    <label for="textInputPrompt" class="form-label"><h4>Enter your prompt here:</h4></label>
+                    <textarea class="form-control auto-resize" id="textInputPrompt" rows="3" placeholder="Your prompt..."></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="textInputAnswer" class="form-label"><h4>Enter your ideal answer here:</h4></label>
+                    <textarea class="form-control auto-resize" id="textInputAnswer" rows="3" placeholder="Your answer..."></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="textInputFacts" class="form-label"><h4>Write your supporting facts here:</h4></label>
+                    <textarea class="form-control auto-resize" id="textInputFacts" rows="3" placeholder="Your supporting facts..."></textarea>
+                </div>
+
+                <div class="container mt-4">
+                    <h4>Your Documents</h4>
+                    <div id="document-section">
+                    </div>
+                    <button class="btn btn-success mt-3" id="add-document-btn">Add a document</button>
+                </div><br><br>
+
+
+                <form class="p-3">
+                    <div class="form-check mb-2">
+                        <h4>Please verify your submission and certify the following:</h4>
+                        <input class="form-check-input" type="checkbox" id="item1">
+                        <label class="form-check-label" for="item1">All the files provided are PDF files</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="item2">
+                        <label class="form-check-label" for="item2">All the reports provided are either 10-Q or 10-K, not older than October 2023</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="item3">
+                        <label class="form-check-label" for="item3">My prompt is answerable by an AI model thanks to the provided material</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="item4">
+                        <label class="form-check-label" for="item4">My prompt does NOT include any PII</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="item5">
+                        <label class="form-check-label" for="item5">The supporting facts are true according to the documents provided and related to the prompt</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
+
+
+                <script>
+                    const documentSection = document.getElementById('document-section');
+                    const addDocumentBtn = document.getElementById('add-document-btn');
+
+                    function updateDeleteButtons() {
+                        const deleteButtons = document.querySelectorAll('.delete-document-btn');
+                        deleteButtons.forEach(button => {
+                            button.addEventListener('click', function () {
+                                const parent = this.parentElement;
+                                parent.remove();
+                            });
+                        });
+                    }
+
+                    let uniqueIdCounter = 0;
+
+                    function addNewDocument() {
+                        uniqueIdCounter++; // Increment the counter to ensure unique IDs
+                        const newDocument = document.createElement('div');
+                        newDocument.className = 'document-item mb-4 border p-3';
+                        newDocument.innerHTML = `
+                            <label class="form-label">Upload a PDF Document</label>
+                            <input type="file" class="form-control mb-2" accept=".pdf">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="confirmPdf${uniqueIdCounter}">
+                                <label class="form-check-label" for="confirmPdf${uniqueIdCounter}">I confirm this is a PDF file.</label>
+                            </div>
+                            <label class="form-label">Select Document Type</label>
+                            <div class="btn-group mb-2" role="group" aria-label="Report Type">
+                                <input type="radio" class="btn-check" name="documentType${uniqueIdCounter}" id="type1-${uniqueIdCounter}" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="type1-${uniqueIdCounter}">10-Q</label>
+                                <input type="radio" class="btn-check" name="documentType${uniqueIdCounter}" id="type2-${uniqueIdCounter}" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="type2-${uniqueIdCounter}">10-K</label>
+                            </div><br>
+                            <div class="mb-3">
+                                <label for="urlInput-${uniqueIdCounter}" class="form-label">Link to the SEC page</label>
+                                <input type="url" class="form-control" id="urlInput-${uniqueIdCounter}" placeholder="https://www.sec.gov/Archives/edgar/data/..." required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="date-${uniqueIdCounter}" class="form-label">Reporting date</label>
+                                <input type="date" class="form-control" id="date-${uniqueIdCounter}" required>
+                            </div>
+
+                            <button class="btn btn-danger delete-document-btn">Delete</button>
+                        `;
+                        documentSection.appendChild(newDocument);
+                        updateDeleteButtons();
+                    }
+
+
+                    addDocumentBtn.addEventListener('click', addNewDocument);
+
+                    // Initialize delete button functionality
+                    updateDeleteButtons();
+                </script>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

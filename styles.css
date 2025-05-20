@@ -1,0 +1,24 @@
+body {
+    margin: 20px
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 10px;
+    border: 2px solid grey;
+}
+
+.small-image {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.auto-resize {
+    resize: none;
+    overflow: hidden;
+    min-height: calc(1.5em * 4);
+    line-height: 1.5;
+}
